@@ -3,10 +3,12 @@ import urllib.request
 
 URL = "http://0.0.0.0:8080"
 
+
 def get(path):
     reply = urllib.request.urlopen(URL + path)
     data = json.loads(reply.read().decode())
     return data
+
 
 got = get("/ping")
 print(got)
@@ -18,7 +20,7 @@ print(got)
 # 4 - Scanner les planètes aux alentours
 # 5 - Acheter un module correspondant (Miner si solide, GasSucker si gazeux)
 # 6 - Recruter un opérateur pour assigner au module
-# 
+#
 # 7 - Aller sur la planète
 # 8 - Démarrer l'extraction
 # 9 - Attendre la fin de l'extraction

@@ -3,8 +3,9 @@ import random
 
 NB_ITERATIONS_TESTS = 100000
 
+
 def create_property_based_test(f):
-    regressions = [ ]
+    regressions = []
     for i in range(0, NB_ITERATIONS_TESTS):
         if i < len(regressions):
             seed = regressions[i]
@@ -21,10 +22,12 @@ def create_property_based_test(f):
 
 ### Example
 
+
 def addition():
     x = random.randrange(0, 10000)
     y = random.randrange(0, 10000)
     assert x + y > x
     assert x + y > y
+
 
 create_property_based_test(addition)
