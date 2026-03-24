@@ -130,4 +130,4 @@ jobs:
         run: strip target/release/simeis-server
 
       - name: Build documentation
-        run: typst compile docs/manual.typ docs/manual.pdf
+        run: typst compile doc/manual.typ doc/manual.pdf
